@@ -1,0 +1,17 @@
+.header {
+    margin-bottom: 40px;
+}
+
+.header .div_header {
+    background-color: #d1cfcf;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 30px;
+}
+
+.header .div_logo img {
+    width: 120px;
+}

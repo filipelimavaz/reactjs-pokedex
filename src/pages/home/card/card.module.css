@@ -1,0 +1,118 @@
+.card {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card img {
+    max-width: 160px;
+    margin: 0 auto;
+    background: none;
+    z-index: 1;
+}
+
+.card:hover,
+.card:hover img {
+    transform: scale(1.05);
+    transition: 0.5s;
+    margin-top: -10px;
+    filter: drop-shadow(1px 3px 0px #111111);
+}
+
+.card .sub_card {
+    position: absolute;
+    border-radius: 10px;
+    min-height: 450px;
+    padding: 15px;
+    width: 100%;
+    margin-top: 100px;
+    padding-top: 15px;
+    border: 1px solid #424242;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    opacity: 0.9;
+}
+
+.card .sub_card .pokemon_type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 40px;
+}
+
+.card .sub_card .pokemon_type span {
+    border: solid #111111 1px;
+    border-radius: 10px;
+    padding: 2px 5px;
+    font-weight: 100;
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.card .sub_card .information_card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: rgb(136, 135, 135);
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 5px;
+}
+
+.card .sub_card .information_card .header_information_card {
+    display: flex;
+    gap: 5px;
+    border-top: 3px solid #424242;
+    text-transform: capitalize;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-top: 5px;
+}
+
+.card .sub_card .information_card .header_information_card h3 {
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.card .sub_card .information_card h4 {
+    font-weight: 100;
+    font-size: 0.8rem;
+    padding: 0 10px;
+}
+
+.card .sub_card .status_card{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.card .sub_card .status_card .status_information {
+    display: flex;
+    flex-direction: row;
+}
+
+.card .sub_card .status_card .status_information .status_name{
+    display: flex;
+    min-width: 25%;
+    text-transform: uppercase;
+}
+
+.card .sub_card .status_card .status_information progress{
+    min-width: auto;
+    margin: 0 auto;
+}
+
+.card .sub_card .status_card .status_information .status_value{
+    min-width: 10%;
+    margin-left: 5px;
+    text-align: right;
+}
