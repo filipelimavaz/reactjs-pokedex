@@ -58,25 +58,25 @@ export default function LayoutHome() {
         url = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=151"
         break
       case "Hoenn":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=134&offset=252"
+        url = "https://pokeapi.co/api/v2/pokemon?limit=134&offset=251"
         break
       case "Sinnoh":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=106&offset=387"
+        url = "https://pokeapi.co/api/v2/pokemon?limit=106&offset=386"
         break
       case "Unova":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=155&offset=494"
+        url = "https://pokeapi.co/api/v2/pokemon?limit=155&offset=493"
         break
       case "Kalos":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=71&offset=650"
+        url = "https://pokeapi.co/api/v2/pokemon?limit=71&offset=649"
         break
       case "Alola":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=87&offset=722"
+        url = "https://pokeapi.co/api/v2/pokemon?limit=87&offset=721"
         break
       case "Galar":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=95&offset=810"
+        url = "https://pokeapi.co/api/v2/pokemon?limit=95&offset=809"
         break
       case "Paldea":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=119&offset=906"
+        url = "https://pokeapi.co/api/v2/pokemon?limit=119&offset=905"
         break
       default:
         url = "https://pokeapi.co/api/v2/pokemon?limit=1025&offset=0"
