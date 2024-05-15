@@ -7,7 +7,7 @@ import ApiService from '../../../service/ApiService';
 export default function LayoutHome() {
   const [arrayPokemon, setArrayPokemon] = useState([]);
   const [search, setSearch] = useState('')
-  const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon?limit=20&offset=0");
+  const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon?limit=1025&offset=0");
 
   useEffect(() => {
     fetchData(url);
