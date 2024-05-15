@@ -6,41 +6,41 @@ import ApiService from '../../../service/ApiService';
 
 export default function LayoutHome() {
   const [arrayPokemon, setArrayPokemon] = useState([]);
-  const [search, setSearch] = useState('')
-  const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon?limit=1025&offset=0");
+  const [searchArrayPokemon, setSearchArrayPokemon] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
-    fetchData(url);
-  }, [url]);
+    const fetchData = async () => {
+      try {
+        const data = await ApiService.getPokemonData("https://pokeapi.co/api/v2/pokemon?limit=1025&offset=0");
+        setArrayPokemon(data.results);
+        setSearchArrayPokemon(data.results);
+      } catch (error) {
+        console.error('Erro ao buscar dados do Pokémon:', error);
+      }
+    };
 
-  const fetchData = async (url) => {
-    try {
-      const data = await ApiService.getPokemonData(url);
-      setArrayPokemon(data.results);
-    } catch (error) {
-      console.error('Erro ao buscar dados do Pokémon:', error);
-    }
-  };
+    fetchData();
+  }, []);
 
   const filterSearch = () => {
+    let filteredPokemon = searchArrayPokemon;
+
     if (search.length > 0) {
-      return arrayPokemon.filter(pokemon => pokemon.name.includes(search))
-    } else {
-      return arrayPokemon
+      filteredPokemon = filteredPokemon.filter(pokemon => pokemon.name.includes(search.toLowerCase()));
     }
-  }
+
+    return filteredPokemon;
+  };
 
   const getSearch = (e) => {
-    const text = e.toLowerCase()
-    setSearch(e)
-    console.log(text)
-  }
+    setSearch(e.target.value.toLowerCase());
+  };
 
   const filter = (event) => {
     const buttons = document.querySelectorAll(`.${css.region_buttons} button`);
-    const clickedButton = event.target
-    const buttonText = event.target.innerText
-    let url = "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0"
+    const clickedButton = event.target;
+    const buttonText = event.target.innerText;
 
     buttons.forEach((button) => {
       if (button === clickedButton) {
@@ -48,42 +48,41 @@ export default function LayoutHome() {
       } else {
         button.classList.remove(css.active);
       }
-    })
+    });
 
     switch (buttonText) {
       case "Kanto":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0"
-        break
+        setSearchArrayPokemon(arrayPokemon.slice(0, 151));
+        break;
       case "Jotho":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=151"
-        break
+        setSearchArrayPokemon(arrayPokemon.slice(151, 251));
+        break;
       case "Hoenn":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=134&offset=251"
-        break
+        setSearchArrayPokemon(arrayPokemon.slice(251, 386));
+        break;
       case "Sinnoh":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=106&offset=386"
-        break
+        setSearchArrayPokemon(arrayPokemon.slice(386, 493));
+        break;
       case "Unova":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=155&offset=493"
-        break
+        setSearchArrayPokemon(arrayPokemon.slice(493, 649));
+        break;
       case "Kalos":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=71&offset=649"
-        break
+        setSearchArrayPokemon(arrayPokemon.slice(649, 721));
+        break;
       case "Alola":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=87&offset=721"
-        break
+        setSearchArrayPokemon(arrayPokemon.slice(721, 809));
+        break;
       case "Galar":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=95&offset=809"
-        break
+        setSearchArrayPokemon(arrayPokemon.slice(809, 905));
+        break;
       case "Paldea":
-        url = "https://pokeapi.co/api/v2/pokemon?limit=119&offset=905"
-        break
+        setSearchArrayPokemon(arrayPokemon.slice(905, 1025));
+        break;
       default:
-        url = "https://pokeapi.co/api/v2/pokemon?limit=1025&offset=0"
+        setSearchArrayPokemon(arrayPokemon);
+        break;
     }
-
-    setUrl(url); // Update the URL
-  }
+  };
 
   return (
     <div className={css.layout}>
@@ -108,7 +107,7 @@ export default function LayoutHome() {
       </div>
       <div className={css.card_content}>
         {filterSearch().map((card, index) => {
-          return <Card key={index} card={card} />
+          return <Card key={index} card={card} />;
         })}
       </div>
     </div>
