@@ -1,9 +1,5 @@
-.header {
-    margin-bottom: 40px;
-}
-
 .header .div_header {
-    background-color: #d1cfcf;
+    background-color: #4663ac;
     height: 64px;
     display: flex;
     align-items: center;
@@ -14,4 +10,24 @@
 
 .header .div_logo img {
     width: 120px;
+}
+
+.header .div_search {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.header .div_search input {
+    border: none;
+    outline: none;
+    margin-left: 5px;
+}
+
+.header .div_search button {
+    background-color: #4285F4;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
 }

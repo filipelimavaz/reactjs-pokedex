@@ -1,4 +1,4 @@
-.card_content {
+.layout .card_content {
     max-width: 100%;
     margin: 0 30px;
     display: grid;
@@ -6,3 +6,36 @@
     gap: 25px;
     padding-bottom: 30px;
 }
+
+.layout .region_menu {
+    display: flex;
+    height: 150px;
+    background-color: #d2deeb;
+    margin-bottom: 20px;
+}
+
+.layout .region_menu .region_buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.layout .region_menu .region_buttons button {
+    margin: 0 15px;
+    background-color: #ffffff;
+    color: #111111;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.layout .region_menu .region_buttons button.active {
+    background-color: #4285F4;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
