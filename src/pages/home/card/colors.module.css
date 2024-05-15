@@ -1,3 +1,47 @@
+.bg_green {
+    background: #49d0b0;
+}
+
+.bg_red {
+    background: #fa6d6b;
+}
+
+.bg_blue {
+    background: #76befe;
+}
+
+.bg_yellow {
+    background: #ffd76f;
+}
+
+.bg_brown {
+    background: #544726c8;
+}
+
+.bg_purple {
+    background: #9a6fff;
+}
+
+.bg_black {
+    background: #111;
+}
+
+.bg_pink {
+    background: #fc6cb4;
+}
+
+.bg_gray {
+    background: #d3d3d3;
+}
+
+.bg_white {
+    background: #fff;
+}
+
+.bg_all {
+    background: #999;
+}
+
 .color_fire {
     background-color: #ff7402;
 }

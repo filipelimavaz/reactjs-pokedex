@@ -1,5 +1,5 @@
 class Pokemon {
-    constructor(sprite, type1, type2, id, name, weight, height, abilities, stats) {
+    constructor(sprite, type1, type2, id, name, weight, height, abilities, stats, color, habitat, description) {
         this.sprite = sprite;
         this.type1 = type1;
         this.type2 = type2;
@@ -9,6 +9,9 @@ class Pokemon {
         this.height = height;
         this.abilities = abilities;
         this.stats = stats;
+        this.color = color
+        this.habitat = habitat
+        this.description = description
     }
 
     getSprite() {
@@ -45,6 +48,18 @@ class Pokemon {
 
     getStats() {
         return this.stats;
+    }
+
+    getColor() {
+        return this.color
+    }
+
+    getHabitat() {
+        return this.habitat
+    }
+
+    getDescription() {
+        return this.description
     }
 }
 

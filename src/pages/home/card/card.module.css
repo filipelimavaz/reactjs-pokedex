@@ -1,6 +1,6 @@
 .card {
     width: 100%;
-    height: 550px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -24,7 +24,7 @@
 .card .sub_card {
     position: absolute;
     border-radius: 10px;
-    min-height: 450px;
+    height: 85%;
     padding: 15px;
     width: 100%;
     margin-top: 100px;
@@ -80,10 +80,22 @@
     font-size: 1rem;
 }
 
-.card .sub_card .information_card h4 {
+.card .sub_card .information_card .information_subcard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px 10px;
+}
+
+.card .sub_card .information_card .information_subcard h4 {
     font-weight: 100;
     font-size: 0.8rem;
-    padding: 0 10px;
+    margin: 2px 0;
+    text-transform: capitalize;
+}
+
+.card .sub_card .information_card .information_subcard span {
+    text-transform: lowercase;
 }
 
 .card .sub_card .status_card{
@@ -100,19 +112,37 @@
     flex-direction: row;
 }
 
-.card .sub_card .status_card .status_information .status_name{
+.card .sub_card .status_card .status_information .status_name {
     display: flex;
     min-width: 25%;
     text-transform: uppercase;
 }
 
-.card .sub_card .status_card .status_information progress{
+.card .sub_card .status_card .status_information progress {
     min-width: auto;
     margin: 0 auto;
 }
 
-.card .sub_card .status_card .status_information .status_value{
+.card .sub_card .status_card .status_information .status_value {
     min-width: 10%;
     margin-left: 5px;
     text-align: right;
+}
+
+.card .sub_card .dex_entry {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 10% 5px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    gap: 5px;
+    border: 1px solid #111111;
+}
+
+.card .sub_card .dex_entry h4 {
+    font-weight: 100;
+    font-size: 0.8rem;
+    text-align: justify;
 }
