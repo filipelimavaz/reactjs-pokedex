@@ -41,6 +41,7 @@ export default function LayoutHome() {
     const buttons = document.querySelectorAll(`.${css.region_buttons} button`);
     const clickedButton = event.target;
     const buttonText = event.target.innerText;
+    setSearchArrayPokemon(arrayPokemon)
 
     buttons.forEach((button) => {
       if (button === clickedButton) {
