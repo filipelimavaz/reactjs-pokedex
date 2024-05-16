@@ -18,7 +18,9 @@ This is a project of a Pokédex developed using ReactJS. The Pokédex is a virtu
 
 ### Demo:
 
-Link to the live application: [https://filipelimavaz-pokedex.netlify.app/](https://filipelimavaz-pokedex.netlify.app/)
+⚠️ Please be patient when using the application ⚠️ </br>
+⚠️ It is hosted on a free server and may experience instability ⚠️ </br>
+Link to the live application: https://filipelimavaz-pokedex.netlify.app/
 
 ### Features:
 
