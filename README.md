@@ -18,8 +18,8 @@ Este é um projeto de uma Pokédex desenvolvida utilizando ReactJS. A Pokédex �
 
 ### Demonstração:
 
-⚠️Por favor tenha paciência ao utilizar a aplicação⚠️
-⚠️Ela está hospedada em um servidor gratuito e pode demonstrar instabilidade⚠️
+⚠️Por favor tenha paciência ao utilizar a aplicação⚠️ </br>
+⚠️Ela está hospedada em um servidor gratuito e pode demonstrar instabilidade⚠️ </br>
 Link da aplicação online: [https://filipelimavaz-pokedex.netlify.app/](https://filipelimavaz-pokedex.netlify.app/)
 
 ### Recursos:
