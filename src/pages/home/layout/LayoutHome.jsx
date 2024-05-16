@@ -34,8 +34,9 @@ export default function LayoutHome() {
   };
 
   const getSearch = (e) => {
-    setSearch(e.target.value.toLowerCase());
-  };
+    const texto = e.toLowerCase()
+    setSearch(texto)
+  }
 
   const filter = (event) => {
     const buttons = document.querySelectorAll(`.${css.region_buttons} button`);
