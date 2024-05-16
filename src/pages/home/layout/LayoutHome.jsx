@@ -8,6 +8,7 @@ export default function LayoutHome() {
   const [arrayPokemon, setArrayPokemon] = useState([]);
   const [searchArrayPokemon, setSearchArrayPokemon] = useState([]);
   const [search, setSearch] = useState('');
+  const [loading, setLoading] = useState(true); // Adicionando estado para controle de carregamento
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,6 +16,7 @@ export default function LayoutHome() {
         const data = await ApiService.getPokemonData("https://pokeapi.co/api/v2/pokemon?limit=1025&offset=0");
         setArrayPokemon(data.results);
         setSearchArrayPokemon(data.results);
+        setLoading(false); // Define o estado de carregamento para falso após obter os dados
       } catch (error) {
         console.error('Erro ao buscar dados do Pokémon:', error);
       }
@@ -106,11 +108,13 @@ export default function LayoutHome() {
           </div>
         </div>
       </div>
-      <div className={css.card_content}>
-        {filterSearch().map((card, index) => {
-          return <Card key={index} card={card} />;
-        })}
-      </div>
+      {!loading && ( // Renderiza os cards somente quando o estado de carregamento for falso
+        <div className={css.card_content}>
+          {filterSearch().map((card, index) => {
+            return <Card key={index} card={card} />;
+          })}
+        </div>
+      )}
     </div>
   );
 }
