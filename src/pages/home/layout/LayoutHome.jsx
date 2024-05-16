@@ -13,8 +13,9 @@ export default function LayoutHome() {
     const fetchData = async () => {
       try {
         const data = await ApiService.getPokemonData("https://pokeapi.co/api/v2/pokemon?limit=1025&offset=0");
+        const startData = await ApiService.getPokemonData("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0");
         setArrayPokemon(data.results);
-        setSearchArrayPokemon(data.results);
+        setSearchArrayPokemon(startData.results);
       } catch (error) {
         console.error('Erro ao buscar dados do Pokémon:', error);
       }
@@ -92,8 +93,8 @@ export default function LayoutHome() {
       <div className={css.region_menu}>
         <div className={css.region_buttons}>
           <div>
-            <button onClick={filter} className={css.active}>All Regions</button>
-            <button onClick={filter}>Kanto</button>
+            <button onClick={filter}>All Regions</button>
+            <button onClick={filter} className={css.active}>Kanto</button>
             <button onClick={filter}>Jotho</button>
             <button onClick={filter}>Hoenn</button>
             <button onClick={filter}>Sinnoh</button>

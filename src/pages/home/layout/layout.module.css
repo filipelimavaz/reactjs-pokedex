@@ -13,6 +13,7 @@
     align-items: center;
     padding: 20px;
     background-color: #d2deeb;
+    padding-top: 100px;
     margin-bottom: 20px;
 }
 
@@ -33,6 +34,7 @@
     padding: 5px 10px;
     border-radius: 5px;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .layout .region_menu .region_buttons button.active {
