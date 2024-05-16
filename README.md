@@ -52,7 +52,7 @@ O `useState` é um dos React Hooks mais utilizados. Ele permite que você adicio
 
 O `useEffect` é outro React Hook essencial que permite que você realize efeitos colaterais em componentes funcionais. Neste projeto ele foi utilizado para buscar dados da PokéAPI assim que o componente for montado, garantindo que os dados estivessem prontos para serem exibidos quando necessário.
 
-### Fetch
+### `Fetch`
 
 O método `fetch` é nativo do JavaScript e é amplamente utilizado para fazer requisições HTTP assíncronas. Nes projeto eu utilizei o `fetch` para fazer requisições à PokéAPI e obter os dados dos Pokémon. Esses dados, uma vez recebidos, podem ser processados e exibidos na interface do usuário.
 
